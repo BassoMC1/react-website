@@ -1,6 +1,5 @@
 import React, {FC, createContext} from 'react';
-import './App.css';
-import { Person,  HairColor } from './componets/Person';
+import { Person,  HairColor } from '../componets/Person';
 
 interface AppContextinterface {
     name: string;
@@ -9,7 +8,7 @@ interface AppContextinterface {
 }
 const AppContext = createContext<AppContextinterface | null>(null)
 
-const App: FC = () => {
+const Apps: FC = () => {
   
   const contextValue: AppContextinterface = {
     name: "Pedro",
@@ -19,6 +18,7 @@ const App: FC = () => {
 
   return (
     <AppContext.Provider value={contextValue}>
+      
     <div className="App">
       <Person name="John" age={673} email="noob@gmail.com" hairColor={HairColor.blond} />
     </div>
@@ -26,4 +26,4 @@ const App: FC = () => {
   );
 }
 
-export default App;
+export default Apps;
