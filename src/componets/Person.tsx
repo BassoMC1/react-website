@@ -22,14 +22,14 @@ export const Person: FC<Props> = ({name, age, email, hairColor}) => {
 
     const [country, setCountry] = useState<string | null>("");
 
-    type NameType = "pedro" | "jack"
-    const nameForType: NameType = "jack"
+    // type NameType = "pedro" | "jack"
+    // const nameForType: NameType = "jack"
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         setCountry(event.target.value)
     }
 
-    
+
   return (  
     <div>
       <h1> {name}</h1>
